@@ -1,0 +1,40 @@
+.xunjia-cvcx {
+	width: 95% !important;
+	font-size: 12px !important;
+	margin-top: 0.2rem;
+}
+
+.xunjia-cvc {
+	width: 33.33%;
+	font-size: 12px !important;
+}
+
+.cvcb-a {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
+	width: 65%;
+	float: left;
+	font-size: 12px !important;
+	color: black !important;
+}
+
+.cvcb-b {
+	float: right;
+	font-size: 12px !important;
+	text-align: right;
+	margin-right: 0px;
+}
+
+.wodefuwubaojia-li2v {
+	width: 95% !important;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+	float: left;
+	margin-top: 5px;
+	margin-left: 0.5rem;
+	padding: 0.05rem 0rem 0.05rem 0rem;
+}

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>解绑账号</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/huiyuancenter.css" />
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group {
+				float: left;
+				width: 25%;
+				font-size: 17px;
+			}
+			
+			.login-box-cen-form-input {
+				width: 75% !important;
+				float: left;
+				margin-top: 10px;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			
+			.submit {
+				background: #FE5E14;
+				color: #fff;
+			}
+			
+			.mui-input-group input:last-child {
+				background-image: none;
+				font-size: 17px;
+			}
+			
+			input {
+				border: 0px !important;
+				margin-bottom: 0px !important;
+			}
+			
+			.login-box-cen-form-input {
+				font-size: 17px;
+				color: black !important;
+			}
+			
+			.mui-input-row label {
+				width: 100% !important;
+			}
+		</style>
+
+	</head>
+
+	<body style="background: white;">
+		<header class="mui-bar mui-bar-nav">
+			<a href="index.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">账号绑定/解绑</h1>
+		</header>
+
+		<div class="mui-content" style="background: white;">
+			<div class="xian"></div>
+			
+			
+			
+			
+			
+			<div class="login-first">
+				<form name="form1" action="huiyuancenter.html">
+					<!--<div class="mui-input-row">
+						<label>手机号：</label>
+						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+					</div>
+					-->
+
+					<div class="mui-input-row">
+						<div class="register-box-cen-form clearfix mar-bottom20">
+							<span class="mui-input-group">账号：</span>
+							<input type="text" class="login-box-cen-form-input w358" placeholder="请输入手机号" id="reg_phone" />
+							<label class="err err-top40" id="reg_phone_text">手机号错误</label>
+						</div>
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group">密码：</span>
+						<input name="yourpass" required autocomplete='password' type="password" class="login-box-cen-form-input w358" placeholder="请输入登录密码" id="reg_password" required/>
+						<label class="err err-top40" id="reg_password_text">密码错误</label>
+					</div>
+
+					<!--<div class="register-box-cen-form clearfix mar-bottom20">
+					<span class="mui-input-group">确认密码：</span>
+					<input onblur="checkpsd2()"  name="yourpass2" type="password" class="login-box-cen-form-input w358"   placeholder="设置新登录密码"  required/>
+					
+					<label class="tips" class="err err-top40" id="divpassword2"></label>
+				</div>-->
+
+					<div class="xian2"></div>
+					<div class="xian2" style="background: white;"></div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20 mar-top50">
+						<button style="font-size: 17px;" type="submit" class="login-box-cen-form-button w380" id="reg_submit">解绑</button>
+					</div>
+				</form>
+
+				<div class="link-area" style="margin-left: 15px;margin-right: 15px;text-align: left;">
+					<a id='reg' style="color: black;">你当前绑定的用户名为：<a href="#">张大炮</a>，如果你需要解绑请输入账号和密码进行解绑！
+					</a>
+				</div>
+				
+				<div class="link-area" style="margin-left: 15px;margin-right: 15px;margin-top: 10px; text-align: left;">
+					<a id='reg' style="color: black;">客户编码：<a href="#">007</a>
+					</a>
+				</div>
+				
+				<div class="link-area" style="margin-left: 15px;margin-right: 15px;margin-top: 10px; text-align: left;">
+					<a id='reg' style="color: black;">余额：<a href="#">&yen;1.00</a>
+					</a>
+				</div>
+				
+				<div class="link-area" style="margin-left: 15px;margin-right: 15px;margin-top: 10px; text-align: left;">
+					<a id='reg' style="color: black;">级别：<a href="#">政府人员</a>
+					</a>
+				</div>
+
+				<!--<div class="mui-input-row" style="margin-top: 20px;margin-left: 15px;margin-right: 15px;">
+					<a href="#">
+						<span class="qita-span">其他账号登录：<i class="icon iconfont" style="float: right; margin-top: 5px;color: #30A338;">&#xe601;</i></span>
+					</a>
+				</div>-->
+			</div>
+
+			<div class="mui-content-padded oauth-area">
+
+			</div>
+		</div>
+
+	</body>
+
+     <script type="text/javascript" src="js/jquery-1.12.2.min.js" ></script>
+	<script type="text/javascript" src="js/tbdValidate.js"></script>
+
+	<script type="text/javascript">
+		//验证确认密码 
+
+		//		function checkpsd2(){ 
+		//             
+		//             
+		//				if(form1.yourpass.value!=form1.yourpass2.value) { 
+		//
+		//				   divpassword2.innerHTML='<font class="tips_false">您两次输入的密码不一样</font>';
+		//
+		//				} else { 
+		//
+		//				    divpassword2.innerHTML='<font class="tips_true">输入正确</font>';
+		//
+		//				}
+		//
+		//		}
+
+		/* 声明一个数组用来存input值 */
+		var array = [""];
+
+		/*方法调用*/
+		inputFn(".mui-input-row:nth-child(1) input", 0);
+
+		/* 方法封装 */
+		/*键盘弹起时实时生效*/
+		function inputFn(ele, num) {
+			$(ele).keyup(function() {
+				var val = $(this).val().trim();
+				console.log(val);
+				array[num] = val;
+				inputArray();
+			});
+		}
+		/*遍历数组，判断input值是否存在于数组中*/
+		function inputArray() {
+			for(var i = 0, arrayLen = array.length; i < arrayLen; i++) {
+				//  如果值不在数组中 就返回 并 去掉颜色
+				if(array[i] == "" || 　array[i] == null) {
+					$("button").removeClass("submit");
+					console.log(array[i] + "无法提交" + i)
+					return;
+				}
+			}
+			//
+			$("button").addClass("submit");
+		}
+
+		$(function() {
+
+			//注册 
+			var regconfig = [{
+					eleinput: "reg_phone",
+					eletext: "reg_phone_text",
+					rule: [{
+						reg: /^.+$/,
+						text: '手机号不能为空'
+					}, {
+						reg: /^1[34578]\d{9}$/,
+						text: '手机号格式错误'
+					}]
+				},
+				{
+					eleinput: "reg_password",
+					eletext: "reg_password_text",
+					rule: [{
+						reg: /^.+$/,
+						text: '密码不能为空'
+					}, {
+						reg: /^.{6,10}$/,
+						text: '密码在6-10位之间'
+					}]
+				}
+
+			];
+			tbdValidate(
+				regconfig, {
+					elesubmit: "reg_submit", //提交按钮
+					funsubmit: function() { //验证通过可提交回调	
+						//信息提交接口
+						alert("成功");
+					},
+					funerr: function() { //不可提交回调
+
+					},
+					funerrlist: function(errlist) {
+						$('#' + errlist[0]).focus();
+					}
+				}
+			);
+			//end	
+		});
+	</script>
+
+</html>

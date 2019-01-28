@@ -1,0 +1,98 @@
+.wodefuwubaojia {
+	float: left;
+	width: 100%;
+}
+
+.wodefuwubaojia ul {
+	float: left;
+	width: 100%;
+	margin-top: 0px;
+}
+
+.wodefuwubaojia li {
+	float: left;
+	list-style: none;
+	background: white;
+	width: 100%;
+	border-radius: 2.5px;
+	margin-top: 0.5rem;
+}
+
+.wodefuwubaojia-li {
+	float: left;
+	width: 90%;
+	color: black;
+/*	font-size: 0.72rem;*/
+	margin-left: 0.5rem;
+	padding: 0.5rem 0rem 0.5rem 0rem;
+}
+
+.wodefuwubaojia-li2 {
+	float: left;
+	width: 90%;
+	color: black;
+	/*font-size: 0.72rem;*/
+	margin-left: 0.5rem;
+	padding: 0rem 0rem 0.5rem 0rem;
+}
+
+.wodefuwubaojia-li3 {
+	float: left;
+	width: 45%;
+	color: black;
+/*	font-size: 0.72rem;*/
+	margin-left: 0.5rem;
+	padding: 0rem 0rem 0.5rem 0rem;
+}
+
+.wodefuwubaojia-li4 {
+	float: left;
+	width: 45%;
+	color: #FE5E14;
+	text-align: right;
+	/*font-size: 0.72rem;*/
+	margin-left: 0.5rem;
+	padding: 0rem 0rem 0.5rem 0rem;
+}
+
+.wodefuwubaojia-li2x {
+	float: left;
+	width: 90%;
+	color: #FE5E14;
+	/*font-size: 0.72rem;*/
+	margin-left: 0.5rem;
+	padding: 0rem 0rem 0.5rem 0rem;
+}
+
+.chongzhijilu {
+	float: left;
+	width: 100%;
+	background: white;
+	height: 300px;
+	margin-top: 10px;
+}
+
+.chongzhijilu-span {
+	float: left;
+	padding: 15px;
+	width: 100%;
+}
+
+.inputmoney {
+	float: left;
+	width: 50% !important;
+	border-radius: 2.5px;
+	height: 1.5rem !important;
+}
+
+.tijiao-x {
+	float: left;
+	width: 100%;
+	height: 2rem;
+	color: white;
+	 text-align: center;
+	 line-height: 2rem;
+	 font-size: 0.75rem;
+	 background:#FE5E14 ;
+	 border-radius:2.5px ;
+}

@@ -1,0 +1,19 @@
+.xunjia-cvcx{
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+	font-size: 12px !important;
+}
+.xunjia-cvc{
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+	width: 100% !important;
+	font-size: 12px !important;
+}
+
+.xunjia-cvcx{
+ font-size: 12px !important;	
+}

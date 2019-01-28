@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>注册账号</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link href="css/yuangongliebiao.css" rel="stylesheet" />
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group {
+				float: left;
+				width: 29%;
+				/*font-size: 0.75rem;*/
+				background: none !important;
+			}
+			
+			.login-box-cen-form-input {
+				width: 71% !important;
+				float: left;
+				margin-top: 10px;
+				background: none !important;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			
+			.submit {
+				background: #FE5E14;
+				color: #fff;
+			}
+			
+			.mui-input-group input:last-child {
+				background-image: none;
+				font-size: 0.75rem;
+			}
+			
+			input {
+				border: 0px !important;
+				margin-bottom: 0px !important;
+			}
+			
+			.login-box-cen-form-input {
+				font-size: 17px;
+				color: black !important;
+			}
+			
+			::-webkit-input-placeholder {
+				/* WebKit, Blink, Edge */
+				color: #4d525d;
+			}
+			
+			:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: #4d525d;
+			}
+			
+			::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: #4d525d;
+			}
+			
+			:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: #4d525d;
+			}
+			
+			ul,
+			menu,
+			dir {
+				display: block;
+				list-style-type: disc;
+				margin-block-start: 0em !important;
+				margin-block-end: 0em !important;
+				margin-inline-start: 0px !important;
+				margin-inline-end: 0px !important;
+				padding-inline-start: 0px !important;
+			}
+			
+			ul {
+				padding: 0px !important;
+			}
+		</style>
+
+	</head>
+
+	<body style="background: white;">
+		<header class="mui-bar mui-bar-nav">
+			<a href="loginx.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title"></h1>
+		</header>
+
+		<div class="mui-content" style="background: white;">
+			<div class="xian"></div>
+			<div class="login-first">
+				<form name="form1" action="chongzhimimachenggong.html">
+					<!--<div class="mui-input-row">
+						<label>手机号：</label>
+						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+					</div>
+					-->
+					<div class="mui-input-row">
+						<div class="register-box-cen-form clearfix mar-bottom20">
+							<span class="mui-input-group">姓名：</span>
+							<input type="text" class="login-box-cen-form-input w358" placeholder="请输入用户名" id="name" />
+							<label style="width: 100% !important;" class="err err-top40" id="name_text">请输入用户名</label>
+						</div>
+
+						<div class="register-box-cen-form clearfix mar-bottom20">
+							<span class="mui-input-group">手机号：</span>
+							<input type="text" class="login-box-cen-form-input w358" placeholder="请输入手机号" id="reg_phone" />
+							<label style="width: 100% !important;" class="err err-top40" id="reg_phone_text">手机号错误</label>
+						</div>
+					</div>
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group">验证码：</span>
+						<input style="width: 35% !important;" type="text" class="login-box-cen-form-input w228" placeholder="短信验证码" id="reg_mescode" />
+						<button class="login-box-cen-form-mes w120 mar-left10" id="reg_mescode_btn" able="able">获取验证码</button>
+						<label class="err err-top40" id="reg_mescode_text">短信验证码错误</label>
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group">密码：</span>
+						<input name="yourpass" type="password" class="login-box-cen-form-input w358" required autocomplete='password' placeholder="设置登录密码" id="reg_password" />
+						<label class="err err-top40" id="reg_password_text">密码错误</label>
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group">确认密码：</span>
+						<input onblur="checkpsd2()" name="yourpass2" type="password" class="login-box-cen-form-input w358" required autocomplete='password' placeholder="确认登录密码" required/>
+
+						<label class="tips" class="err err-top40" id="divpassword2"></label>
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group" style="margin-top: 10px;">地区选择：</span>
+						<div class="lis">
+
+							<!--选择地区-->
+							<section class="express-area">
+								<a id="expressArea" href="javascript:void(0)">
+									<dl>
+
+										<dd style="margin-left: 10px;">请选择城市</dd>
+									</dl>
+								</a>
+							</section>
+							<!--选择地区弹层-->
+							<section id="areaLayer" class="express-area-box">
+								<article id="areaBox">
+
+									<div class="top">
+										<h3>选择城市</h3>
+									</div>
+									<ul id="areaList" class="area-list" style="padding: 0px; margin-bottom: 500px;"></ul>
+								</article>
+							</section>
+							<!--遮罩层-->
+							<div id="areaMask" class="mask"></div>
+						</div>
+
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group" style="margin-top: 15px;">从业类型：</span>
+						<div class="zhuce-input-input" style="float: left;width: 71%;">
+							<div class="select-res">
+								<div id="vbc" style="float:left;height:48px;">
+									<p style="margin-top: 10px;margin-left: 10px; width:100%;float:left;height:30px;line-height: 30px;color: #4d525d;font-size:17px;">请选择</p>
+								</div>
+							</div>
+
+							<div class="select-box">
+								<span class="close-btn">
+				<img src="img/close_btn.jpg"  style="width: 100%;height: 100%;"/>
+				</span>
+								<div class="wrap">
+									<ul class="first" style="float:left; "></ul>
+									<ul class="second" style="float:left;border-top: solid 1px #ddd;margin-top: 5px;"></ul>
+									<ul class="third" style="float:left;border-top: solid 1px #ddd;margin-top: 5px;"></ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="xian2"></div>
+					<div class="xian2" style="background: white;margin-bottom: 20px;">
+
+						<div class="register-box-cen-form clearfix mar-bottom20" style="height: 30px;margin-bottom: 20px;border: 0px;">
+							<div style="width: 100%;line-height:30px;">
+								<input type="checkbox" style="float: left;width: 20px;height: 20px;margin-top: 5px;">
+								<div class="boxx" style="float: left;margin-left: 15px;">
+									<a style="float: left;color: black;">我已阅读</a>
+									<a href="javascript:void(0)" class="flipInX" style="float: left;">隐私协议</a>
+
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20 mar-top50">
+						<button type="submit" class="login-box-cen-form-button w380" id="reg_submit">注册账号</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="mui-content-padded oauth-area">
+
+			</div>
+		</div>
+		<div id="dialogBgx"></div>
+		<div id="dialogx" class="animatedx">
+			<div class="dialogTopx"></div>
+
+			<div class="yztx2" style="overflow:auto; float: left;margin-top:10px;width: 95%;margin-left: 2.5%;height:450px;">
+				<ul class="vb-li">
+					<a class="xz" style="margin-bottom: 10px;">*隐私协议</a>
+					<span class="xz" style="margin-bottom: 10px;font-size: 0.5rem;">电子普通发票是税局认可的有效凭证，其法律效力，基本用途及使用规则同纸质发票</span>
+
+				</ul>
+
+			</div>
+
+			<div class="yztx3" style="float:left;margin-top:20px;width:100%;height: auto;">
+				<ul class="ul-li" style="float: left;width: 100%;">
+					
+					<li style="float: left;width: 100%;height: 40px;">
+						<a href="javascript:;" class="claseDialogBtnx">
+							<div class="yztx3b" style="float: left;width: 100%;text-align: center;">确定</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="js/tbdValidate.js"></script>
+	<script type="text/javascript" src="js/jquery.area.js"></script>
+
+	<script type="text/javascript">
+		var dataJson = {
+			"option": [{
+				"id": "1",
+				"name": "请选择类型",
+				"child": [{
+					"id": "4",
+					"name": "建设单位",
+					"child": [{
+						"id": "12",
+						"name": "塑制平衡木"
+					}, {
+						"id": "13",
+						"name": "木质平衡木"
+					}, {
+						"id": "14",
+						"name": "独木桥"
+					}, {
+						"id": "15",
+						"name": "平衡步道"
+					}]
+				}, {
+					"id": "1057",
+					"name": "工程服务",
+					"child": [{
+						"id": "1063",
+						"name": "益智玩具"
+					}, {
+						"id": "1064",
+						"name": "感官玩具"
+					}, {
+						"id": "1065",
+						"name": "数学玩具"
+					}, {
+						"id": "1066",
+						"name": "手眼协调"
+					}, {
+						"id": "1067",
+						"name": "拼图玩具"
+					}, {
+						"id": "1068",
+						"name": "其他玩具"
+					}, {
+						"id": "1069",
+						"name": ""
+					}, {
+						"id": "1070",
+						"name": ""
+					}, {
+						"id": "1071",
+						"name": ""
+					}, {
+						"id": "1072",
+						"name": ""
+					}, {
+						"id": "1073",
+						"name": ""
+					}]
+				}, {
+					"id": "534",
+					"name": "工程材料",
+					"child": [{
+						"id": "555",
+						"name": "品牌策划"
+					}, {
+						"id": "556",
+						"name": "ＶＩ设计"
+					}, {
+						"id": "557",
+						"name": "招标设计"
+					}, {
+						"id": "558",
+						"name": "园区规划设计"
+					}, {
+						"id": "559",
+						"name": "装修设计"
+					}, {
+						"id": "560",
+						"name": "招标设计"
+					}, {
+						"id": "561",
+						"name": "园区规划设计"
+					}, {
+						"id": "562",
+						"name": "装修设计"
+					}, {
+						"id": "563",
+						"name": "招标设计"
+					}, {
+						"id": "564",
+						"name": "园区规划设计"
+					}, {
+						"id": "565",
+						"name": "装修设计"
+					}]
+				}]
+			}]
+		}
+		var l1 = 0,
+			l2 = 0;
+		var cname1, cname2, cname3;
+		var cid1, cid2, cid3;
+		var canClick = !0;
+		var canClose = !1;
+		$('.select-box').css({
+			left: $('.select-res').offset().left,
+			top: $('.select-res').offset().top + $('.select-res').outerHeight(true)
+		});
+		$($('.select-res')).on('click', function() {
+			$('.select-box').show();
+			if(canClick) {
+				$('ul', $('.select-box')).html('');
+				fillData();
+				canClick = !1;
+			}
+			document.getElementById("vbc").style.display = "none";
+		});
+		$('span', $('.select-box')).on("click", function() {
+			canClose ? $('.select-box').hide() : alert('请选择下级品类！');
+			canClick = !0;
+		});
+
+		$('.select-res').on('click', 'a', function() {
+			$(this).parent().remove();
+			$('.select-box').css({
+				top: $('.select-res').offset().top + $('.select-res').outerHeight(true)
+			});
+		})
+
+		$('ul.first', $('.select-box')).on('click', 'li', function() {
+			$(this).addClass('selected').siblings().removeClass('selected');
+			$('ul.third').html('');
+			fillData($(this).index());
+			l1 = $(this).index();
+			cname1 = $(this).text();
+			cid1 = $(this).attr('val');
+			canClose = !1;
+			$('input.cid', $('.select-res')).val(cid1);
+			$('input.cname', $('.select-res')).val(cname1);
+		});
+		$('ul.second', $('.select-box')).on('click', 'li', function() {
+			$(this).addClass('selected').siblings().removeClass('selected');
+			fillData(l1, $(this).index());
+			l2 = $(this).index();
+			cname2 = $(this).text();
+			cid2 = $(this).attr('val');
+			canClose = !1;
+			$('input.cid', $('.select-res')).val(cid1 + ',' + cid2);
+			$('input.cname', $('.select-res')).val(cname1 + ',' + cname2);
+		});
+		$('ul.third', $('.select-box')).on('click', 'li', function() {
+			$(this).addClass('selected').siblings().removeClass('selected');
+			cname3 = $(this).text();
+			cid3 = $(this).attr('val');
+			canClose = !0;
+			var hasExist = !1;
+			$('.select-res').find("p").each(function() {
+				if($(this).text().split(' > ')[0] == cname3) hasExist = !0;
+			})
+			hasExist ? alert('所选品类已被添加！') : $('.select-res').append('<p>' + cname3 + '<a></a><input type="hidden" value="' + cid3 + '" name="cid[]" /><input type="hidden" value="' + cname3 + '" name="cname[]" /></p>');
+			$('.select-box').css({
+				top: $('.select-res').offset().top + $('.select-res').outerHeight(true)
+			});
+			$('input.cid', $('.select-res')).val(cid3);
+			$('input.cname', $('.select-res')).val(cname3);
+		});
+
+		//填充级联数据
+
+		function fillData(l1, l2) {
+			var temp_html = "";
+			if(typeof(dataJson.option) != 'undefined' && arguments.length == 0) {
+				$.each(dataJson.option, function(i, pro) {
+					temp_html += '<li val="' + pro.id + '">' + pro.name + '</li>';
+				});
+			} else if(typeof(dataJson.option[l1].child) != 'undefined' && arguments.length == 1) {
+				$.each(dataJson.option[l1].child, function(i, pro) {
+					temp_html += '<li val="' + pro.id + '">' + pro.name + '</li>';
+				});
+			} else if(typeof(dataJson.option[l1].child[l2].child) != 'undefined' && arguments.length == 2) {
+				$.each(dataJson.option[l1].child[l2].child, function(i, pro) {
+					temp_html += '<li val="' + pro.id + '">' + pro.name + '</li>';
+				});
+			}
+			$('.select-box ul:eq(' + arguments.length + ')').html(temp_html);
+		}
+
+		//验证确认密码 
+
+		function  checkpsd2() { 
+
+			if(form1.yourpass.value != form1.yourpass2.value)  { 
+
+				 
+				divpassword2.innerHTML = '<font class="tips_false">您两次输入的密码不一样</font>';
+
+			} 
+			else  { 
+
+				 
+				divpassword2.innerHTML = '<font class="tips_true">输入正确</font>';
+
+			}
+
+		}
+
+		/* 声明一个数组用来存input值 */
+		var array = [""];
+
+		/*方法调用*/
+		inputFn(".mui-input-row:nth-child(1) input", 0);
+
+		/* 方法封装 */
+		/*键盘弹起时实时生效*/
+		function inputFn(ele, num) {
+			$(ele).keyup(function() {
+				var val = $(this).val().trim();
+				console.log(val);
+				array[num] = val;
+				inputArray();
+			});
+		}
+		/*遍历数组，判断input值是否存在于数组中*/
+		function inputArray() {
+			for(var i = 0, arrayLen = array.length; i < arrayLen; i++) {
+				//  如果值不在数组中 就返回 并 去掉颜色
+				if(array[i] == "" || 　array[i] == null) {
+					$("button").removeClass("submit");
+					console.log(array[i] + "无法提交" + i)
+					return;
+				}
+			}
+			//
+			$("button").addClass("submit");
+		}
+
+		$(function() {
+
+			//获取短信验证码
+			var mesdong = null;
+			var mestime = 60;
+			$("#reg_mescode_btn").click(function() {
+				var phoneval = $.trim($("#reg_phone").val());
+				if(regconfig[0].rule[0].reg.test(phoneval)) {
+					$("#reg_phone_text").hide();
+				} else {
+					$("#reg_phone_text").html(regconfig[0].rule[0].text).show();
+					$("#reg_phone").focus();
+					return false
+				};
+				if(regconfig[0].rule[1].reg.test(phoneval)) {
+					$("#reg_phone_text").hide();
+				} else {
+					$("#reg_phone").focus();
+					$("#reg_phone_text").html(regconfig[0].rule[1].text).show();
+					return false
+				};
+				if($(this).attr('able') == "able") { //发送
+					$(this).attr('able', "disable");
+					$(this).css('cursor', 'not-allowed');
+					$(this).html(mestime + "s");
+					mesdong = setInterval(function() { //倒计时
+						mestime -= 1;
+						if(mestime < 0) {
+							$("#reg_mescode_btn").attr('able', "able");
+							$("#reg_mescode_btn").css('cursor', 'pointer');
+							$("#reg_mescode_btn").html('获取验证码');
+							mestime = 60;
+							clearInterval(mesdong);
+						} else {
+							$("#reg_mescode_btn").html(mestime + "s");
+						};
+					}, 1000);
+					//短信发送接口
+
+				} else {
+
+				};
+			});
+			//注册 
+			var regconfig = [{
+					eleinput: "reg_phone",
+					eletext: "reg_phone_text",
+					rule: [{
+						reg: /^.+$/,
+						text: '手机号不能为空'
+					}, {
+						reg: /^1[34578]\d{9}$/,
+						text: '手机号格式错误'
+					}]
+				},
+				{
+					eleinput: "reg_password",
+					eletext: "reg_password_text",
+					rule: [{
+						reg: /^.+$/,
+						text: '密码不能为空'
+					}, {
+						reg: /^.{6,10}$/,
+						text: '密码在6-10位之间'
+					}]
+				},
+				{
+					eleinput: "reg_password",
+					eletext: "reg_password_text",
+					rule: [{
+						reg: /^.+$/,
+						text: '密码不能为空'
+					}, {
+						reg: /^.{6,10}$/,
+						text: '密码在6-10位之间'
+					}]
+				},
+
+				{
+					eleinput: "reg_mescode",
+					eletext: "reg_mescode_text",
+					rule: [{
+						reg: /^.+$/,
+						text: '短信验证码不能为空'
+					}, {
+						reg: /^[0-9]{6}$/,
+						text: '输入6位短信验证码'
+					}]
+				}
+			];
+			tbdValidate(
+				regconfig, {
+					elesubmit: "reg_submit", //提交按钮
+					funsubmit: function() { //验证通过可提交回调	
+						//信息提交接口
+						alert("成功");
+					},
+					funerr: function() { //不可提交回调
+
+					},
+					funerrlist: function(errlist) {
+						$('#' + errlist[0]).focus();
+					}
+				}
+			);
+			//end	
+		});
+	</script>
+
+	<script>
+		//弹窗
+		var w, h, className;
+
+		function getSrceenWH() {
+			w = $(window).width();
+			h = $(window).height();
+			$('#dialogBgx').width(w).height(h);
+		}
+
+		window.onresize = function() {
+			getSrceenWH();
+		}
+		$(window).resize();
+
+		$(function() {
+			getSrceenWH();
+
+			//显示弹框
+			$('.boxx a').click(function() {
+				className = $(this).attr('class');
+				$('#dialogBgx').fadeIn(300);
+				$('#dialogx').removeAttr('class').addClass('animatedx ' + className + '').fadeIn();
+				$("html,body").css({
+					overflow: "hidden",
+					height: "100%"
+				});
+			});
+
+			//关闭弹窗
+			$('.claseDialogBtnx').click(function() {
+				$('#dialogBgx').fadeOut(300, function() {
+					$('#dialogx').addClass('bounceOutUp').fadeOut();
+					$("html,body").css({
+						overflowX: "hidden",
+						overflowY: "scroll",
+						height: "100%"
+					});
+
+				});
+			});
+		});
+	</script>
+
+</html>

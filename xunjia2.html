@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>询价</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" href="css/login.css" />
+		<link href="css/style.css" rel="stylesheet" />
+		<!--<link rel="stylesheet" href="css/common.css" />-->
+		<link href="css/yuangongliebiao.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<link rel="stylesheet" type="text/css" href="css/mobileSelect.css">
+		<link rel="stylesheet" href="css/dropify.min.css">
+		<!--<script src="js/mobileSelect.js" type="text/javascript"></script>-->
+		<!--<script src="js/jquery-1.12.2.min.js"></script>-->
+		<link href="css/demo.css" rel="stylesheet" />
+
+<script src="js/jquery-1.9.1.js"></script>
+		<!--<script type="text/javascript" src="js/tab.js"></script>-->
+		<!--<script src="js/city-picker.data.js"></script>
+		<script src="js/city-picker.js"></script>
+		<script src="js/main.js"></script>-->
+	<script>
+	$(document).ready(function() {
+		 $("#city").citySelect({
+				prov: "广东",
+				city: "中山市",
+				dist: "石歧区",
+				nodata: "none"
+			});
+		
+	});
+
+ </script>
+   <script src="js/jquery.cityselect.js"></script>
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			
+			* {
+				touch-action: pan-y;
+			}
+			
+			ul {
+				padding: 0px !important;
+			}
+			.iconfont {
+				float: left;
+				font-family: "iconfont" !important;
+				font-size: 26px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			ul,
+			menu,
+			dir {
+				display: block;
+				list-style-type: disc;
+				margin-block-start: 1em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				padding-inline-start: 0px;
+			}
+			
+			input::-webkit-input-placeholder {
+				color: black;
+			}
+			
+			input::-moz-placeholder {
+				/* Mozilla Firefox 19+ */
+				color: black;
+			}
+			
+			input:-moz-placeholder {
+				/* Mozilla Firefox 4 to 18 */
+				color: black;
+			}
+			
+			input:-ms-input-placeholder {
+				/* Internet Explorer 10-11 */
+				color: black;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 200px;
+			}
+			
+			.gaikuang-first {
+				float: left;
+				width: 27%;
+				/* font-size: 0.75rem; */
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			.mui-segmented-control .mui-control-item.mui-active {
+				color: #fff;
+				background-color: #FE5E14;
+			}
+			
+			.mui-segmented-control {
+				border-top: 1px solid #FE5E14;
+				border-bottom: 0px;
+				border-left: 0px;
+				border-right: 0px;
+			}
+			
+			.mui-segmented-control .mui-control-item {
+				color: black;
+				border: 0px;
+				border-left: 0px solid #007aff;
+			}
+			
+			.swiper-slide img {
+				float: left;
+				width: 100%;
+				height: 100%;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #FE5E14;
+			}
+			
+			.mui-table-view:before {
+				background-color: #EFEFF4;
+			}
+			
+			.mui-table-view:after {
+				background-color: #EFEFF4;
+			}
+			
+			.tuichudenglu {
+				float: left;
+				width: 100%;
+				height: 2rem;
+				margin-top: 1rem;
+				text-align: center;
+				line-height: 2rem;
+				background: #FE5E14;
+				margin-bottom: 1rem;
+				border-radius: 3px;
+				color: white;
+			}
+			
+			.tab {
+				width: 100%;
+			}
+			
+			.tabnav {
+				float: left;
+				border-bottom: 1px solid #d2d2d2;
+				width: 100%;
+				height: 40px;
+				overflow: hidden;
+				background: #fff;
+				color: #333;
+			}
+			
+			.tabnav li {
+				float: left;
+				list-style: none;
+				width: 50%;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 17px;
+				cursor: pointer;
+			}
+			
+			.tabcontent {
+				float: left;
+				width: 100%;
+				height: 100px;
+				background: #fff;
+			}
+			
+			.tabcontent .tab_con {
+				width: 260px;
+				height: 300px;
+				display: none;
+			}
+			
+			.cuttor {
+				background: #FE5E14;
+				color: #fff;
+			}
+			
+			.tabcontent>div {
+				display: none;
+			}
+			
+			.lis {
+				list-style: none;
+				float: left;
+				margin-left: 0rem;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="img/cbd.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/muwu.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/shuijiao.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/yuantiao.jpg" />
+				</div>
+
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+
+		</div>
+
+		<nav id="bar" class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="index.html">
+				<span class="mui-icon">
+					<i class="icon iconfont" style="margin-right: 5px;">&#xe626;</i>
+				</span>
+
+				<span class="mui-tab-label">报材料</span>
+			</a>
+			<a class="mui-tab-item" href="indexx.html">
+				<span class="mui-icon">
+					
+				<i class="icon iconfont" style="margin-right: 5px;">&#xe617;</i>	
+				</span>
+				<span class="mui-tab-label">报服务</span>
+			</a>
+			<a class="mui-tab-item" href="xunjia.html">
+				<span class="mui-icon">
+					<i class="icon iconfont" style="color: #FE5E14; margin-right: 5px;">&#xe63f;</i>
+				</span>
+				<span class="mui-tab-label">询价 </span>
+			</a>
+			<a href="loginx.html" class="mui-tab-item">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		</nav>
+
+		<!--<div class="mui-content">-->
+
+		<div class="tab">
+			<ul class="tabnav" style="padding: 0px;">
+				<li class="cuttor">服务询价</li>
+				<li>材料询价</li>
+
+			</ul>
+			<div class="tabcontent" style="background-color: #EFEFF4;">
+				<div style=" display:block;">
+					<div class="login-first" style="margin-top: 0px;margin-bottom: 50px;">
+
+						<form class="mui-input-group">
+
+							<div class="index-three-span" style="margin-top: 10px;">
+								<i class="icon iconfont" style="color: #FE5304;">&#xe6bc;</i>
+								<span>服务询价</span>
+
+							</div>
+
+							<div class="mui-input-row">
+								<label>标题：</label>
+								<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入标题">
+							</div>
+
+							<div class="mui-input-row" style="margin-top: 10px;">
+								<label>工程名称：</label>
+								<input id='phone' type="text" class="mui-input-clear mui-input" placeholder="请输入工程名称">
+							</div>
+
+							<div class="mui-input-row" style="margin-top: 10px;">
+								<label>服务类型：</label>
+								<div id="trigger2" >服务类型选择</div>
+							</div>
+
+							<div class="mui-input-row" style="margin-top: 10px;">
+								<label>工程地点：</label>
+								<div class="lis" style="font-size:17px ;">
+
+									<!--选择地区-->
+									<section class="express-area">
+										<a id="expressArea" href="javascript:void(0)">
+											<dl>
+
+												<dd style="font-size:17px;color: black;">请选择城市</dd>
+											</dl>
+										</a>
+									</section>
+									<!--选择地区弹层-->
+									<section id="areaLayer" class="express-area-box">
+										<article id="areaBox">
+
+											<div class="top">
+												<h3>选择城市</h3>
+											</div>
+											<ul id="areaList" class="area-list" style="padding: 0px; margin-bottom: 500px;"></ul>
+										</article>
+									</section>
+									<!--遮罩层-->
+									<div id="areaMask" class="mask"></div>
+								</div>
+
+							</div>
+
+							<div class="mui-input-row" style="margin-top: 10px;">
+								<label>报价人：</label>
+								<div class="boxx" style="float: left;width: 40%;">
+									<a href="javascript:void(0)" class="flipInX">
+										<input id='passwordx' style="padding: 0;" type="text" class="mui-input-clear mui-input" placeholder="邀请报价人">
+									</a>
+								</div>
+
+							</div>
+
+							<div class="mui-input-row" style="margin-top: 10px;">
+								<label>报价人数：</label>
+								<div class="gw_num">
+									<em class="jian">-</em>
+									<input type="text" value="1" class="num" />
+									<em class="add">+</em>
+								</div>
+							</div>
+
+							<div class="mui-input-row" style="margin-top: 10px;">
+								<label>截止时间：</label>
+								<input id='leixing' style="width: 18%;float: left;" type="text" class="mui-input-clear mui-input" placeholder="请输入">
+
+								<span style="float: left;height: 45px;line-height: 43px;">
+				          	天
+				          </span>
+							</div>
+
+							<div class="index-three-span" style="margin-top: 1rem;">
+								<i class="icon iconfont">&#xe620;</i>
+								<span>填写工程明细</span>
+
+							</div>
+
+						</form>
+
+						<div class="index-three-span">
+									<div class="mui-input-row" style="margin-top: 10px;">
+<div class="jb" style="width: 100%;height: 1.7rem;background: #F5F4F9;">
+   <div id="dreg">
+      <div class="regitem1">
+		<div id="city">  
+		  <select class="prov" style="float: left;width: 45%;" ></select>   
+		  <select class="city" style="float: left;width: 45%;" disabled="disabled"></select>  
+		  <!--<select class="dist" disabled="disabled"></select>  -->
+	
+		</div>
+		</div>
+    </div>
+   </div>	
+
+							</div>
+
+							<span class="fuwuxun">选择报价人性质：</span>
+							<div class="mui-input mui-radio mui-left" style="height: 1.5rem; float: left !important;clear: none;">
+								<label style="width: 100%;line-height: 1.5rem;">单位</label>
+								<input name="radio1" type="radio">
+
+							</div>
+
+							<div class="mui-input mui-radio mui-left" style=" height: 1.5rem;float: left !important;clear: none;">
+								<label style="width: 100%;line-height: 1.5rem;">个人</label>
+								<input name="radio1" type="radio">
+
+							</div>
+
+							<div class="gongchenggaikuang">
+								<div class="gaikuang-first">
+									<span>工程概况：</span>
+								</div>
+								<div class="gaikuang-second">
+									<textarea></textarea>
+								</div>
+							</div>
+
+							<div class="gongchenggaikuang">
+								<div class="gaikuang-first">
+									<span>具体要求：</span>
+								</div>
+								<div class="gaikuang-second">
+									<textarea></textarea>
+								</div>
+
+							</div>
+
+							<div class="gongchenggaikuang">
+								<div class="gaikuang-first">
+									<span>其他信息：</span>
+								</div>
+								<div class="gaikuang-second">
+									<textarea></textarea>
+								</div>
+
+							</div>
+
+							<div class="gongchenggaikuang">
+								<div class="gaikuang-first">
+									<span>其他要求：</span>
+								</div>
+								<div class="gaikuang-second">
+									<textarea></textarea>
+								</div>
+
+							</div>
+
+							<div class="gongchenggaikuang" style="float: none;">
+								<div class="gaikuang-first" style=" width: 100%;margin-top: 10px;">
+									<span>上传其他资料：</span>
+								</div>
+								<div class="gaikuang-first" style="width: 80%;">
+									<input type="file" id="input-file-now" class="dropify" data-default-file="" />
+								</div>
+
+							</div>
+
+							<div class="gongchenggaikuang" style="height: auto;">
+								<div class="index-three-span" style="margin-top: 1rem;margin-left: 0px;">
+									<i class="icon iconfont">&#xe61f;</i>
+									<span>阶段完成：</span>
+
+								</div>
+
+								<div class="gaikuang-first">
+									<span>阶段一：</span>
+								</div>
+								<div class="gaikuang-second">
+									<textarea></textarea>
+								</div>
+								<button style="top: 10px;" type="button" class="mui-btn  mui-icon mui-icon-plus mui-right">添加阶段</button>
+							</div>
+
+							<div class="gongchenggaikuang">
+								<a href="fabuxunjiachenggong.html">
+									<div class="tuichudenglu">
+										<span>发布询价</span>
+									</div>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+				<div>
+
+					<ul class="mui-table-view" style="margin-top: 50px;background-color:#EFEFF4;border: 0px;">
+						<li class="mui-table-view-cell" style="text-align: center;">
+							请在电脑上打开网页<br />www.gongchengdi.cn进行操作
+						</li>
+
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+		<div id="dialogBgx"></div>
+		<div id="dialogx" class="animatedx" style="top: 6%;height: 530px;">
+			<div class="dialogTopx"></div>
+			<div class="yztx2" style="float: left;width: 95%;height:1.5rem;margin-left: 2.5%;text-align: center;">
+				<span style="float: left;line-height:1.5rem;">请选择地址：</span>
+				<div style="position: relative;float: left;">
+					<input class="form-control" readonly type="text" data-toggle="city-picker" data-level="city" placeholder="全国">
+				</div>
+			</div>
+
+			<div class="yztx2" style="overflow:auto; float: left;margin-top:10px;width: 95%;margin-left: 2.5%;height:400px;">
+				<ul class="vb-li">
+					<a class="xz" style="margin-bottom: 10px;">报价人列表：</a>
+
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+					<li class="li-x">
+						<div class="inxx"><input class="input-class" type="checkbox"></div>
+						<div class="inxx-a">
+							<a>大梁生(天平公司)已报价：0条，好评0条，差评0条</a>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<div class="yztx3" style="float:left;margin-top:0px;width:100%;height: auto;">
+				<ul class="ul-li" style="float: left;width: 100%;">
+					<li style="float: left;width: 50%;height: 40px;border-right:0.05rem solid #EBEBEB;">
+						<a href="#">
+							<div class="yztx3b" style="float: left;width: 100%;text-align: center;">确定</div>
+						</a>
+					</li>
+					<li style="float: left;width: 50%;height: 40px;">
+						<a href="javascript:;" class="claseDialogBtnx">
+							<div class="yztx3b" style="float: left;width: 100%;text-align: center;">取消</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+
+		<!--<script type="text/javascript">
+			$(".tab").tab({
+				type: 'click'
+			});
+		</script>-->
+
+		<!--描述：地区选择-->
+		<!--<script type="text/javascript" src="js/jquery.area.js"></script>-->
+
+		<!--<script src="js/swiper.min.js"></script>
+-->
+		<!--<script src="js/dropify.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				// Basic
+				$('.dropify').dropify();
+
+				// Translated
+				$('.dropify-fr').dropify({
+					messages: {
+						'default': '点击或拖拽文件到这里',
+						'replace': '点击或拖拽文件到这里来替换文件',
+						'remove': '移除文件',
+						'error': '对不起，你上传的文件太大了'
+					}
+				});
+
+				// Used events
+				var drEvent = $('.dropify-event').dropify();
+
+				drEvent.on('dropify.beforeClear', function(event, element) {
+					return confirm("Do you really want to delete \"" + element.filename + "\" ?");
+				});
+
+				drEvent.on('dropify.afterClear', function(event, element) {
+					alert('File deleted');
+				});
+			});
+		</script>-->
+
+		<!--<script>
+			//轮播
+			var weekdayArrx = ['工程咨询', '工程设计', '工程监理', '招标代理', '工程造价', '工程施工'];
+
+			var mobileSelect1x = new MobileSelect({
+				trigger: '#trigger2',
+				title: '性质选择',
+				wheels: [{
+					data: weekdayArrx
+				}],
+				position: [0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+				transitionEnd: function(indexArr, data) {
+					console.log(data);
+				},
+				callback: function(indexArr, data) {
+					console.log(data);
+				}
+			});
+
+			var swiper = new Swiper('.swiper-container', {
+				spaceBetween: 30,
+				centeredSlides: true,
+				autoplay: {
+					delay: 2500,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+
+		
+		</script>-->
+
+		<!--<script>
+			$("#passwordx").focus(function() {
+				document.activeElement.blur();
+			});
+
+			$(document).ready(function() {
+				//加的效果
+				$(".add").click(function() {
+					var n = $(this).prev().val();
+					var num = parseInt(n) + 1;
+					if(num == 0) {
+						return;
+					}
+					$(this).prev().val(num);
+				});
+				//减的效果
+				$(".jian").click(function() {
+					var n = $(this).next().val();
+					var num = parseInt(n) - 1;
+					if(num == 0) {
+						return
+					}
+					$(this).next().val(num);
+				});
+			})
+		</script>-->
+
+	</body>
+
+</html>

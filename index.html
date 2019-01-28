@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+		<link rel="stylesheet" type="text/css" href="css/mobileSelect.css">
+		<script src="js/mobileSelect.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
+		<!--
+        	作者：284308203@qq.com
+        	时间：2019-01-07
+        	描述：下面新增的css
+        -->
+		<link rel="stylesheet" href="css/font.css" />
+		<link href="css/yuangongliebiao.css" rel="stylesheet" />
+		<!--App自定义的css-->
+
+		<style>
+			* {
+				touch-action: pan-y;
+			}
+			
+			body {
+				background: #EFEFF4;
+			}
+			
+			.iconfont {
+				float: left;
+				font-family: "iconfont" !important;
+				font-size: 26px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			.title {
+				margin: 10px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+				border-radius: 2.5px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+			
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			
+			.oa-contact-content {
+				width: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,oa-contact-position {
+				float: left;
+			}
+			
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			.xunjia-img{
+				margin-top: 1rem;
+			}
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.mui-bar-tab .mui-tab-item.mui-active {
+				color: #FE5E14;
+			}
+			
+			button {
+				padding: 0px;
+				color: #333;
+				border: 0px solid #ccc;
+			}
+			
+			.mui-table-view:before {
+				background-color: #EFEFF4;
+			}
+			
+			.mui-table-view:after {
+				background-color: white;
+			}
+			
+			ul,
+			menu,
+			dir {
+				display: block;
+				list-style-type: disc;
+				margin-block-start: 0em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				padding-inline-start: 0px;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 200px;
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				/* Center slide text vertically */
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			.swiper-slide img {
+				float: left;
+				width: 100%;
+				height: 100%;
+			}
+			ul{
+				padding: 0px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- Swiper -->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="img/cbd.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/muwu.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/shuijiao.jpg" />
+				</div>
+				<div class="swiper-slide">
+					<img src="img/yuantiao.jpg" />
+				</div>
+
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+
+		</div>
+
+		<nav id="bar" class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="index.html">
+				<span class="mui-icon">
+					<i class="icon iconfont" style="color: #FE5E14;margin-right: 5px;">&#xe626;</i>
+				</span>
+
+				<span class="mui-tab-label">报材料</span>
+			</a>
+			<a class="mui-tab-item" href="indexx.html">
+				<span class="mui-icon">
+					
+				<i class="icon iconfont" style="margin-right: 5px;">&#xe617;</i>	
+				</span>
+				<span class="mui-tab-label">报服务</span>
+			</a>
+			<a class="mui-tab-item" href="xunjia.html">
+				<span class="mui-icon">
+					<i class="icon iconfont" style="margin-right: 5px;">&#xe63f;</i>
+				</span>
+				<span class="mui-tab-label">询价 </span>
+			</a>
+			<a href="loginx.html" class="mui-tab-item">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+
+				<div class="title-first-x">
+
+					<li class="title-first-li" style="width: 42.5% !important;">
+						<i class="icon iconfont" style="color: #FE5304;font-size: 1.5rem;float: left;line-height: 2rem;margin-left: 0.25rem;">
+							<span class="mui-icon mui-icon-map"></span>
+						</i>
+
+						<div class="lis">
+
+							<!--选择地区-->
+							<section class="express-area">
+								<a id="expressArea" href="javascript:void(0)">
+									<dl>
+
+										<dd>全国</dd>
+									</dl>
+								</a>
+							</section>
+							<!--选择地区弹层-->
+							<section id="areaLayer" class="express-area-box">
+								<article id="areaBox">
+
+									<div class="top">
+										<h3>选择城市</h3>
+									</div>
+									<ul id="areaList" class="area-list" style="padding: 0px; margin-bottom: 500px;"></ul>
+								</article>
+							</section>
+							<!--遮罩层-->
+							<div id="areaMask" class="mask"></div>
+						</div>
+
+					</li>
+
+					<li class="title-first-li" style="width: 42.5% !important;">
+						<i class="icon iconfont" style="color: #FE5304;font-size: 1.5rem;float: left;line-height: 2rem;margin-left: 0.25rem;">
+								<span class="mui-icon mui-icon-list"></span>
+							</i>
+						<div id="trigger4">类型</div>
+					</li>
+                <li class="title-first-li" style="width: 15% !important;">
+                	<div class="boxx" style="float: left;width: 100%;">
+						<a href="javascript:void(0)" class="flipInX" style="color: black;">
+						<i class="icon iconfont" style="color: #FE5304;font-size: 1.3rem;float: left;line-height: 2rem;margin-left: 0.25rem;">
+								&#xe63d;
+							</i>
+						</a>
+					</div>
+					</li>
+				</div>
+
+				
+
+				<div class="xunjia-liebiao" >
+						<div class="cgal_nr">
+					<div class="lanren">
+						<div class="hidden">
+					
+
+						
+							<li>
+								<a href="cailiaodanliebiao.html" >
+								<div class="xunjia-img" style="margin-top: 0.6rem;">
+									<img src="img/img.jpg" />
+								</div>
+
+								<div class="xunjia-ariticle">
+									<span class="ariticle-span" >兴中广场配电箱材料兴中兴中广场配电箱材料兴中</span>
+									
+									<div style="width: 50%;float: left;">
+										<div class="xunjia-cvcx">
+									 广东省-中山市
+									</div>
+									
+								   <div class="xunjia-cvc">
+										电气-配电箱
+									</div>
+										
+									</div>
+									<div style="float: left;width: 50%;">
+										
+									<div class="xunjia-cvcn"  style="float: left;width: 100%;margin-top: 15px;">
+										<a class="cvcb-b" style="font-size: 20px !important;color: #FE5E14 !important;">&yen;200000</a>
+									</div>
+									</div>
+						
+									<div class="xunjia-cvcx">
+										
+										<a class="cvcb-a" style="color: black !important;">进行中</a>
+										<a class="cvcb-b" style="float: right;text-align: right;">2018-08-29</a>
+									</div>
+                                </div>
+</a>
+							</li>
+						
+<li>
+								<div class="xunjia-img" style="margin-top: 0.6rem;">
+									<img src="img/img.jpg" />
+								</div>
+
+								<div class="xunjia-ariticle">
+									<span class="ariticle-span" >兴中广场配电箱材料兴中兴中广场配电箱材料兴中</span>
+									
+									<div style="width: 50%;float: left;">
+										<div class="xunjia-cvcx">
+									 广东省-中山市
+									</div>
+									
+								   <div class="xunjia-cvc">
+										电气-配电箱
+									</div>
+										
+									</div>
+									<div style="float: left;width: 50%;">
+										
+									<div class="xunjia-cvcn"  style="float: left;width: 100%;margin-top: 15px;">
+										<a class="cvcb-b" style="font-size: 20px !important;color: #FE5E14 !important;">&yen;200000</a>
+									</div>
+									</div>
+						
+									<div class="xunjia-cvcx">
+										
+										<a class="cvcb-a" style="color: black !important;">进行中</a>
+										<a class="cvcb-b" style="float: right;text-align: right;">2018-08-29</a>
+									</div>
+                                </div>
+
+							</li>
+							<li>
+								<div class="xunjia-img" style="margin-top: 0.6rem;">
+									<img src="img/img.jpg" />
+								</div>
+
+								<div class="xunjia-ariticle">
+									<span class="ariticle-span" >兴中广场配电箱材料兴中兴中广场配电箱材料兴中</span>
+									
+									<div style="width: 50%;float: left;">
+										<div class="xunjia-cvcx">
+									 广东省-中山市
+									</div>
+									
+								   <div class="xunjia-cvc">
+										电气-配电箱
+									</div>
+										
+									</div>
+									<div style="float: left;width: 50%;">
+										
+									<div class="xunjia-cvcn"  style="float: left;width: 100%;margin-top: 15px;">
+										<a class="cvcb-b" style="font-size: 20px !important;color: #FE5E14 !important;">&yen;200000</a>
+									</div>
+									</div>
+						
+									<div class="xunjia-cvcx">
+										
+										<a class="cvcb-a" style="color: black !important;">进行中</a>
+										<a class="cvcb-b" style="float: right;text-align: right;">2018-08-29</a>
+									</div>
+                                </div>
+
+							</li>
+						<li>
+								<div class="xunjia-img" style="margin-top: 0.6rem;">
+									<img src="img/img.jpg" />
+								</div>
+
+								<div class="xunjia-ariticle">
+									<span class="ariticle-span" >兴中广场配电箱材料兴中兴中广场配电箱材料兴中</span>
+									
+									<div style="width: 50%;float: left;">
+										<div class="xunjia-cvcx">
+									 广东省-中山市
+									</div>
+									
+								   <div class="xunjia-cvc">
+										电气-配电箱
+									</div>
+										
+									</div>
+									<div style="float: left;width: 50%;">
+										
+									<div class="xunjia-cvcn"  style="float: left;width: 100%;margin-top: 15px;">
+										<a class="cvcb-b" style="font-size: 20px !important;color: #FE5E14 !important;">&yen;200000</a>
+									</div>
+									</div>
+						
+									<div class="xunjia-cvcx">
+										
+										<a class="cvcb-a" style="color: black !important;">进行中</a>
+										<a class="cvcb-b" style="float: right;text-align: right;">2018-08-29</a>
+									</div>
+                                </div>
+
+							</li>
+					<li>
+								<div class="xunjia-img" style="margin-top: 0.6rem;">
+									<img src="img/img.jpg" />
+								</div>
+
+								<div class="xunjia-ariticle">
+									<span class="ariticle-span" >兴中广场配电箱材料兴中兴中广场配电箱材料兴中</span>
+									
+									<div style="width: 50%;float: left;">
+										<div class="xunjia-cvcx">
+									 广东省-中山市
+									</div>
+									
+								   <div class="xunjia-cvc">
+										电气-配电箱
+									</div>
+										
+									</div>
+									<div style="float: left;width: 50%;">
+										
+									<div class="xunjia-cvcn"  style="float: left;width: 100%;margin-top: 15px;">
+										<a class="cvcb-b" style="font-size: 20px !important;color: #FE5E14 !important;">&yen;200000</a>
+									</div>
+									</div>
+						
+									<div class="xunjia-cvcx">
+										
+										<a class="cvcb-a" style="color: black !important;">进行中</a>
+										<a class="cvcb-b" style="float: right;text-align: right;">2018-08-29</a>
+									</div>
+                                </div>
+
+							</li>
+							
+							
+					</ul>
+					
+					</div>
+						<ul class="list" style="padding: 0px;">数据加载中，请稍后...</ul>
+						<div class="more" style="float: left;margin-bottom: 60px;margin-top: 10px;width: 100%;background: white;padding: 10px; text-align: center;border-radius: 2.5px;">
+							<a style="font-size: 15px !important;" href="javascript:;" onClick="lanren.loadMore();">点击加载更多</a>
+						</div>
+					</div>
+				</div>
+				
+				</div>
+			
+
+			</div>
+
+			
+		</div>
+		
+		<!--
+        	作者：284308203@qq.com
+        	时间：2019-01-07
+        	描述：弹框div
+        -->
+	<div id="dialogBgx"></div>
+		<div id="dialogx" class="animatedx" style="height: auto;top: 40%;">
+			<div class="dialogTopx"></div>
+
+			<div class="yztx2" style="overflow:auto; float: left;margin-top:10px;width: 95%;margin-left: 2.5%;height:auto;">
+				<ul class="vb-li">
+					<a class="xz" style="margin-bottom: 10px;">*状态选择</a>
+					<span class="xz" style="font-size: 12px;">
+						<div class="mui-input mui-radio mui-left" style="height: 1.5rem; float: left !important;clear: none;">
+								<label style="width: 100%;line-height: 1.5rem;">进行中</label>
+								<input name="radio1" type="radio">
+
+							</div>
+                    </span>
+					<span class="xz" style="font-size: 12px;">
+						<div class="mui-input mui-radio mui-left" style="height: 1.5rem; float: left !important;clear: none;">
+
+								<label style="width: 100%;line-height: 1.5rem;">已满额</label>
+								<input name="radio1" type="radio">
+
+						</div>
+						
+					</span>
+					
+					<span class="xz" style="font-size: 12px;">
+						<div class="mui-input mui-radio mui-left" style="height: 1.5rem; float: left !important;clear: none;">
+								<label style="width: 100%;line-height: 1.5rem;">已截止</label>
+								<input name="radio1" type="radio">
+
+						</div>
+						
+					</span>
+
+					
+
+					
+				</ul>
+
+			</div>
+
+			<div class="yztx3" style="float:left;margin-top:0px;width:100%;height: auto;margin-bottom: 0px;">
+				<ul class="ul-li" style="float: left;width: 100%;">
+					<li style="float: left;width: 50%;height: 40px;border-right:0.05rem solid #EBEBEB;">
+						<a href="#">
+							<div class="yztx3b" style="float: left;width: 100%;text-align: center;">确定</div>
+						</a>
+					</li>
+					<li style="float: left;width: 50%;height: 40px;">
+						<a href="javascript:;" class="claseDialogBtnx">
+							<div class="yztx3b" style="float: left;width: 100%;text-align: center;">取消</div>
+						</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+		
+		
+		
+		
+	</body>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	
+	<!--
+    	作者：284308203@qq.com
+    	时间：2019-01-07
+    	描述：弹框
+    -->
+	<script>
+		//弹窗
+		var w, h, className;
+
+		function getSrceenWH() {
+			w = $(window).width();
+			h = $(window).height();
+			$('#dialogBgx').width(w).height(h);
+		}
+
+		window.onresize = function() {
+			getSrceenWH();
+		}
+		$(window).resize();
+
+		$(function() {
+			getSrceenWH();
+
+			//显示弹框
+			$('.boxx a').click(function() {
+				className = $(this).attr('class');
+				$('#dialogBgx').fadeIn(300);
+				$('#dialogx').removeAttr('class').addClass('animatedx ' + className + '').fadeIn();
+				$("html,body").css({
+					overflow: "hidden",
+					height: "100%"
+				});
+			});
+
+			//关闭弹窗
+			$('.claseDialogBtnx').click(function() {
+				$('#dialogBgx').fadeOut(300, function() {
+					$('#dialogx').addClass('bounceOutUp').fadeOut();
+					$("html,body").css({
+						overflowX: "hidden",
+						overflowY: "scroll",
+						height: "100%"
+					});
+
+				});
+			});
+		});
+	</script>
+	
+	
+	
+
+	<script type="text/javascript" src="js/jquery.area.js"></script>
+    <script>
+			var _content = []; //临时存储li循环内容
+			var lanren = {
+				_default: 4, //默认显示图片个数
+				_loading: 4, //每次点击按钮后加载的个数
+				init: function() {
+					var lis = $(".lanren .hidden li");
+					$(".lanren ul.list").html("");
+					for(var n = 0; n < lanren._default; n++) {
+						lis.eq(n).appendTo(".lanren ul.list");
+					}
+					$(".lanren ul.list img").each(function() {
+						$(this).attr('src', $(this).attr('realSrc'));
+					})
+					for(var i = lanren._default; i < lis.length; i++) {
+						_content.push(lis.eq(i));
+					}
+					$(".lanren .hidden").html("");
+				},
+				loadMore: function() {
+					var mLis = $(".lanren ul.list li ").length;
+					for(var i = 0; i < lanren._loading; i++) {
+						var target = _content.shift();
+						if(!target) {
+							$('.lanren .more').html("<p style='font-size: 15px !important;margin-bottom: 0px !important;'>全部加载完毕...</p>");
+							break;
+						}
+						$(".lanren ul.list").append(target);
+						$(".lanren ul.list img").eq(mLis + i).each(function() {
+							$(this).attr('src', $(this).attr('realSrc'));
+						});
+					}
+				}
+			}
+			lanren.init();
+		</script>
+	<script type="text/javascript">
+		
+
+		var weekdayArr = ['进行中', '已满额', '已截止'];
+
+		//更多参数详情可查看文档 https://github.com/onlyhom/mobileSelect.js
+
+		/**
+		 * 参数说明
+		 * @param trigger(必填参数) 触发对象的id/class/tag
+		 * @param wheels(必填参数)  数据源,需要显示的数据
+		 * @param title 控件标题
+		 * @param position 初始化定位
+		 * @param callback 选择成功后触发的回调函数，返回indexArr(选中的选项索引)、data(选中的数据)
+		 * @param transitionEnd 每一次手势滑动结束后触发的回调函数,返回indexArr(当前选中的选项索引)、data(选中的数据)
+		 * @param keyMap 字段名映射
+		 */
+
+		/**
+		 * 函数说明(实例化之后才可用)
+		 * @function setTitle()      参数 string                 设置控件的标题
+		 * @function updateWheel()   参数 sliderIndex, data      重新渲染指定的轮子(可用于先实例化，后通过ajax获取数据的场景)
+		 * @function updateWheels()  参数 data                   重新渲染所有轮子,仅限级联数据格式使用(可用于先实例化，后通过ajax获取数据的场景)
+		 * @function locatePostion() 参数 sliderIndex, posIndex  传入位置数组，重定位轮子的位置
+		 * @function show()          参数 无参                   唤起弹窗组件    
+		 * @function getValue()      参数 无参                   获取组件选择的值     
+		 */
+
+		var mobileSelect1 = new MobileSelect({
+			trigger: '#trigger1',
+			title: '单项选择',
+			wheels: [{
+				data: weekdayArr
+			}],
+			position: [0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+			transitionEnd: function(indexArr, data) {
+				console.log(data);
+			},
+			callback: function(indexArr, data) {
+				console.log(data);
+			}
+		});
+
+		var mobileSelect4 = new MobileSelect({
+			trigger: '#trigger4',
+			title: '材料类型',
+			wheels: [{
+				data: [{
+						id: '1',
+						value: '土建',
+						childs: [{
+								id: '1',
+								value: '混凝土混凝土混凝土'
+							},
+							{
+								id: '2',
+								value: '钢筋'
+							}
+						]
+					},
+					{
+						id: '2',
+						value: '电气',
+						childs: [{
+								id: '1',
+								value: '高压'
+							},
+							{
+								id: '2',
+								value: '配电箱'
+							}
+						]
+					},
+					{
+						id: '3',
+						value: '园林',
+//						childs: [{
+//								id: '1',
+//								value: '花卉'
+//							},
+//							{
+//								id: '2',
+//								value: '植皮'
+//							}
+//						]
+					}
+
+				]
+			}],
+			transitionEnd: function(indexArr, data) {
+				console.log(data);
+				console.log('tanchu');
+			},
+			callback: function(indexArr, data) {
+				console.log(data);
+				console.log('shuchu');
+			}
+		});
+
+		//轮播
+
+		var swiper = new Swiper('.swiper-container', {
+			spaceBetween: 30,
+			centeredSlides: true,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+		});
+	</script>
+
+</html>

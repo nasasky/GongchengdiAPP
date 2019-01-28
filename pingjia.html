@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>评价</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/wodebaojia.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/jqpagination.css">
+		<style>
+			p {
+				font-size: 14px;
+				margin-top: 0;
+				margin-bottom: 10px;
+				color: black;
+			}
+			
+			.iconfont {
+				float: left;
+				font-family: "iconfont" !important;
+				font-size: 26px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			#pro {
+				width: 60%;
+			}
+			
+			#pro li {
+				float: left;
+				width: 50%;
+				list-style: none;
+			}
+		</style>
+	</head>
+
+	<body style="background: white;">
+		<header class="mui-bar mui-bar-nav">
+			<a href="cailiaoxunjiadanxiangqing.html" class=" mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">评价或申请退款</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded" style="margin-top: 40px;">
+				<p>
+					<div class="pingjia2" style="width: 100%;float: left;">
+						<span>评价：</span>
+						<div class="pina">
+							<ul id="pro" style="float: left;">
+								<li><img src="img/haoa.png" alt="" id="p" />
+									<a style="color: black;">好评</a>
+								</li>
+								<li><img src="img/chab.png" alt="" id="p1" />
+									<a style="color: black;">差评</a>
+								</li>
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</p>
+
+				<p>
+					<div class="pingjia2" style="width: 100%;float: left;">
+						<span>申请退款：</span>
+						<div class="pina">
+
+							<ul id="pro" style="float: left;width: 100%;padding: 0px;">
+								<textarea placeholder="请输入你的理由" style="padding: 0px;height: 80px;"></textarea>
+
+							</ul>
+
+						</div>
+
+					</div>
+
+				</p>
+
+				<p>
+					<div class="pingjia2" style="width: 100%;float: left;">
+
+						<a href="shenqingchenggong.html">
+							<button style="height: 1.8rem;width: 100%;float: left;font-size: 17px;">提交申请</button>
+						</a>
+					</div>
+
+				</p>
+
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript">
+		$("#pro>li").click(function() {
+			//				$(this).src="img/1.png";
+			var i = $("#pro>li").index($(this));
+			if(i == 0) {
+				document.getElementById("p").src = "img/haob.png";
+				document.getElementById("p1").src = "img/chab.png";
+
+			}
+			if(i == 1) {
+				document.getElementById("p").src = "img/haoa.png";
+				document.getElementById("p1").src = "img/chaa.png";
+
+			}
+			if(i == 2) {
+				document.getElementById("p").src = "img/haoa.png";
+				document.getElementById("p1").src = "img/chab.png";
+
+			}
+
+			console.log(i)
+		})
+	</script>
+
+</html>

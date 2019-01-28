@@ -1,0 +1,199 @@
+.huiyuancenter {
+	float: left;
+	width: 100%;
+	background: #FE5E14;
+}
+
+.mui-center {
+	float: left;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 1.5rem;
+}
+
+.mui-img-center {
+	float: left;
+	margin-left: 5px;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+}
+
+.mui-img-center img {
+	float: left;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.mui-xingming {
+	float: left;
+	margin-left: 1rem;
+}
+
+.mui-xingming li {
+	list-style: none;
+	color: white;
+	font-size: 0.8rem;
+}
+
+.mui-renzheng {
+	display: block;
+	border: 1px solid white;
+	padding: 0.15rem;
+	font-size: 0.65rem;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+
+
+
+.mui-zichan {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.mui-zichan-first {
+	float: left;
+	width: 90%;
+	margin-bottom: 0.6rem;
+	margin-top: 1.5rem;
+	margin-left: 1rem;
+}
+
+
+
+.mui-zichan-first li {
+	list-style: none;
+	color: white;
+	font-size: 0.7rem;
+}
+
+.huiyuancenter-second {
+	float: left;
+	width: 100%;
+	background: white;
+}
+
+.huicen-second {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+
+.huicen-second ul {
+	margin-block-start: 0em !important;
+	padding-inline-start: 0px !important;
+	margin-block-end: 0em !important;
+}
+
+.huicen-second li {
+	list-style: none;
+	height: 2.5rem;
+	line-height: 2.5rem;
+	color: black;
+}
+
+.li-shezhi {
+	float: left;
+	/*font-size: 0.75rem;*/
+	margin-left: 10px;
+}
+.li-qianjin{
+	float: right;
+}
+.tuichudenglu{
+	float: left;
+	width: 100%;
+	height: 2rem;
+	margin-top: 1rem;
+	text-align: center;
+	line-height: 2rem;
+	background: #FE5E14;
+	margin-bottom: 1rem;
+	border-radius: 3px;
+	color: white;
+}
+.caifu-center{
+	position: relative;
+	width: 100%;
+	height: 8rem;
+	background: #FE5E14;
+}
+.jinger{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 3rem;
+	bottom: 0;
+	
+	
+	text-align: center;
+	
+}
+
+.jinger-span{
+	float: left;
+	font-size: 1.5rem;
+	color: white;
+	width: 100%;
+	
+}
+.jinger-span1{
+	float: left;
+	font-size: 0.7rem;
+	color: white;
+	width: 100%;
+	margin-top: 0.75rem;
+}
+.li-shezhix {
+	float: left;
+	font-size: 0.8rem;
+	
+}
+
+.xianc1{
+	
+    width: 100%;
+    height: 20px;
+    background: #F7F7F7;
+}
+
+.chongzhichenggong{
+	position: relative;
+}
+.chongzhichenggong-tubiao{
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 4rem;
+	width:50%;
+	text-align: center;
+}
+.tubiao-span{
+	
+}
+
+
+.chongzhi-li{
+	float: left;
+	width: 33%;
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+.huicen-secondx li {
+	list-style: none;
+	height: 2rem;
+	line-height: 2rem;
+	color: black;
+	border-bottom: 1px solid #EBEBEB;
+	margin-bottom: 0.2rem;
+}
+.huicen-secondx {
+	margin-left: 15px;
+	margin-right: 15px;
+}

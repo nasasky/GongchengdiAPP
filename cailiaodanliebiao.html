@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>材料列表</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/wodebaojia.css" rel="stylesheet" />
+	    <link rel="stylesheet" href="css/fontc.css" />
+		<style>
+			p {
+				font-size: 14px;
+				margin-top: 0;
+				margin-bottom: 10px;
+				color: black;
+			}
+			
+			.iconfont {
+				float: left;
+				font-family: "iconfont" !important;
+				font-size: 26px;
+				font-style: normal;
+				-webkit-font-smoothing: antialiased;
+				-webkit-text-stroke-width: 0.2px;
+				-moz-osx-font-smoothing: grayscale;
+			}
+			
+			.mui-card {
+				overflow: hidden;
+				margin: 0px;
+				border: 1px solid white;
+				border-radius: 2.5px;
+				background-color: #fff;
+				background-clip: padding-box;
+			}
+			
+			.wodefuwubaojia-li2 {
+				padding: 0.05rem 0rem 0.05rem 0rem;
+			}
+			
+			ul,
+			menu,
+			dir {
+				display: block;
+				list-style-type: disc;
+				margin-block-start: 1em;
+				margin-block-end: 1em;
+				margin-inline-start: 0px;
+				margin-inline-end: 0px;
+				padding-inline-start: 0px;
+			}
+			
+			
+			@charset "UTF-8";
+			.title-block {
+				height: 26px;
+				text-align: center;
+			}
+			
+			.block {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-orient: vertical;
+				-webkit-box-direction: reverse;
+				-ms-flex-flow: column-reverse nowrap;
+				flex-flow: column-reverse nowrap;
+				width: 100%;
+				margin: 0 auto;
+				/*	font-size: 14px;*/
+				color: #4C4C4C;
+				line-height: 28px;
+				border: 0px solid #999;
+				padding: 10px;
+			}
+			
+			.block>.detail {
+				max-height: 87px;
+				margin-bottom: 10px;
+				overflow: hidden;
+			}
+			
+			.block>.case-block {
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				align-items: center;
+				width: 120px;
+				height: 24px;
+				margin: 0 auto 0;
+				color: #0e0e0e;
+				background: #fff;
+				border: 1px solid #999;
+				border-radius: 5px;
+			}
+			
+			.block>.case-block div:nth-of-type(1) {
+				display: block;
+			}
+			
+			.block>.case-block div:nth-of-type(2) {
+				display: none;
+			}
+			
+			.block>[type="checkbox"] {
+				position: relative;
+				display: block;
+				width: 120px;
+				height: 24px;
+				margin: -24px auto 0;
+				z-index: 1000;
+				opacity: 0;
+				border: 1px solid #999;
+			}
+			
+			.block>[type="checkbox"]:hover+.case-block {
+				background-color: #f5f5f5;
+			}
+			
+			.block>[type="checkbox"]:checked+.case-block div:nth-of-type(1) {
+				display: none;
+			}
+			
+			.block>[type="checkbox"]:checked+.case-block div:nth-of-type(2) {
+				display: block;
+			}
+			
+			.block>[type="checkbox"]:checked+.case-block+.detail {
+				max-height: inherit;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a href="index.html" class="mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">询价单详情</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-content-padded">
+
+				<div class="wodefuwubaojia">
+	             
+					<ul style="padding: 0;margin-bottom: 10px;">
+
+						<li>
+							<span class="wodefuwubaojia-li2" style="margin-top: 5px;">标题：配电箱加急。。。。兴中广场配电箱服务兴中广场配电箱服务兴中广场配电箱服务</span>
+							<span class="wodefuwubaojia-li2">询价单号：2012222222</span>
+							<span class="wodefuwubaojia-li2">询价类型：高压-配电</span>
+							<span class="wodefuwubaojia-li2">工程地点：广东-中山市</span>
+							
+							<span class="wodefuwubaojia-li2">附件：询价.rar</span>
+							<span class="wodefuwubaojia-li2" style="margin-top: 0.25rem;"><i class="icon iconfont" style="color: #FE5E14;">&#xe61b;</i>&nbsp;截止时间：3天</span>
+                            <span class="wodefuwubaojia-li2" style="margin-bottom: 0.25rem;margin-top: 0.25rem;"><i class="icon iconfont" style="color: #FE5E14;">&#xe630;</i>&nbsp;酬金：10000.00元</span>
+                            <span class="wodefuwubaojia-li2">
+                            	<section class="block" style="color: black; padding-left: 0px;padding-right: 0px;padding-top: 0px;"> 
+      	<input type="checkbox">
+		<div class="case-block">
+			<div>展开</div>
+			<div>收起</div>
+		</div>
+		<div class="detail">
+			<div><i class="icon iconfont" style="color: #FE5E14;margin-right: 5px;">&#xe636;</i>报价要求：唧唧复唧唧，木兰当户织。不闻机杼声，惟闻女叹息。(惟闻 通：唯)问女何所思，问女何所忆。女亦无所思，女亦无所忆。昨夜见军帖，可汗大点兵，军书十二卷，卷卷有爷名。阿爷无大儿，木兰无长兄，愿为市鞍马，从此替爷征。(惟闻 通：唯)</div>
+			<div>东市买骏马，西市买鞍鞯，南市买辔头，北市买长鞭。旦辞爷娘去，暮宿黄河边，不闻爷娘唤女声，但闻黄河流水鸣溅溅。旦辞黄河去，暮至黑山头，不闻爷娘唤女声，但闻燕山胡骑鸣啾啾。</div>
+			<div>万里赴戎机，关山度若飞。朔气传金柝，寒光照铁衣。将军百战死，壮士十年归。</div>
+			<div>归来见天子，天子坐明堂。策勋十二转，赏赐百千强。可汗问所欲，木兰不用尚书郎，愿驰千里足，送儿还故乡。(一作：愿借明驼千里足)</div>
+			<div>爷娘闻女来，出郭相扶将；阿姊闻妹来，当户理红妆；小弟闻姊来，磨刀霍霍向猪羊。开我东阁门，坐我西阁床，脱我战时袍，著我旧时裳。当窗理云鬓，对镜帖花黄。出门看火伴，火伴皆惊忙：同行十二年，不知木兰是女郎。（帖 通：贴；惊忙一作：惶；惶 火伴 通：伙）</div>
+			<div>雄兔脚扑朔，雌兔眼迷离；双兔傍地走，安能辨我是雄雌。</div>
+		</div>
+	</section>
+                            	
+                            </span>
+						</li>
+
+					</ul>
+				</div>
+
+				<div class="wodefuwubaojia">
+                  <div class="cgal_nr">
+					 <div class="lanren">
+						<div class="hidden">
+					
+					<ul style="padding: 0;">
+
+						<li>
+							
+							<span class="wodefuwubaojia-li2v">JTY-GD-G3T点型光电感烟火灾探测器型感烟火灾探测器型</span>
+							<span class="wodefuwubaojia-li2" style="width: 65%;font-size:12px !important;">2-XDT,3-XDT,4-XDT</span>
+							<span class="wodefuwubaojia-li2" style="float: left; width: 25%;font-size: 12px !important;text-align: right;">45颗</span>
+							<span class="wodefuwubaojia-li3" style="width: 90%; font-size: 12px !important;padding: 0rem 0rem 0.05rem 0rem;">备注：</span>
+
+						</li>
+
+						<li>
+							
+							<span class="wodefuwubaojia-li2v">JTY-GD-G3T点型光电感烟火灾探测器型感烟火灾探测器型</span>
+							<span class="wodefuwubaojia-li2" style="width: 65%;font-size:12px !important;">2-XDT,3-XDT,4-XDT</span>
+							<span class="wodefuwubaojia-li2" style="float: left; width: 25%;font-size: 12px !important;text-align: right;">45颗</span>
+							<span class="wodefuwubaojia-li3" style="width: 90%; font-size: 12px !important;padding: 0rem 0rem 0.05rem 0rem;">备注：</span>
+
+						</li>
+						<li>
+							
+							<span class="wodefuwubaojia-li2v">JTY-GD-G3T点型光电感烟火灾探测器型感烟火灾探测器型</span>
+							<span class="wodefuwubaojia-li2" style="width: 65%;font-size:12px !important;">2-XDT,3-XDT,4-XDT</span>
+							<span class="wodefuwubaojia-li2" style="float: left; width: 25%;font-size: 12px !important;text-align: right;">45颗</span>
+							<span class="wodefuwubaojia-li3" style="width: 90%; font-size: 12px !important;padding: 0rem 0rem 0.05rem 0rem;">备注：</span>
+
+						</li>
+						
+						
+						<li>
+							
+							<span class="wodefuwubaojia-li2v">JTY-GD-G3T点型光电感烟火灾探测器型感烟火灾探测器型</span>
+							<span class="wodefuwubaojia-li2" style="width: 65%;font-size:12px !important;">2-XDT,3-XDT,4-XDT</span>
+							<span class="wodefuwubaojia-li2" style="float: left; width: 25%;font-size: 12px !important;text-align: right;">45颗</span>
+							<span class="wodefuwubaojia-li3" style="width: 90%; font-size: 12px !important;padding: 0rem 0rem 0.05rem 0rem;">备注：</span>
+
+						</li>
+						
+						<li>
+							
+							<span class="wodefuwubaojia-li2v">JTY-GD-G3T点型光电感烟火灾探测器型感烟火灾探测器型</span>
+							<span class="wodefuwubaojia-li2" style="width: 65%;font-size:12px !important;">2-XDT,3-XDT,4-XDT</span>
+							<span class="wodefuwubaojia-li2" style="float: left; width: 25%;font-size: 12px !important;text-align: right;">45颗</span>
+							<span class="wodefuwubaojia-li3" style="width: 90%; font-size: 12px !important;padding: 0rem 0rem 0.05rem 0rem;">备注：</span>
+
+						</li>
+
+					</ul>
+					
+					
+					
+					</div>
+						<ul class="list" style="padding: 0px;">数据加载中，请稍后...</ul>
+						<div class="more" style="float: left;margin-bottom: 60px;margin-top: 10px;width: 100%;background: white;padding: 10px; text-align: center;border-radius: 2.5px;">
+							<a style="font-size: 15px !important;" href="javascript:;" onClick="lanren.loadMore();">点击加载更多</a>
+						</div>
+					</div>
+				</div>
+				</div>
+
+			</div>
+
+
+			
+		</div>
+		
+		<div class="wodefuwubaojia" style="position: fixed;right: 0;left: 0;bottom: 0px;width: 100%;" >
+
+				<ul style="padding: 0;margin-bottom: 0px;">
+
+					<li>
+						<a href="canyucailiaobaojia.html">
+							<div class="tijiao-x" > 
+								参与报价
+							</div>
+						</a>
+					</li>
+
+				</ul>
+			</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script>
+			var _content = []; //临时存储li循环内容
+			var lanren = {
+				_default: 4, //默认显示图片个数
+				_loading: 4, //每次点击按钮后加载的个数
+				init: function() {
+					var lis = $(".lanren .hidden li");
+					$(".lanren ul.list").html("");
+					for(var n = 0; n < lanren._default; n++) {
+						lis.eq(n).appendTo(".lanren ul.list");
+					}
+					$(".lanren ul.list img").each(function() {
+						$(this).attr('src', $(this).attr('realSrc'));
+					})
+					for(var i = lanren._default; i < lis.length; i++) {
+						_content.push(lis.eq(i));
+					}
+					$(".lanren .hidden").html("");
+				},
+				loadMore: function() {
+					var mLis = $(".lanren ul.list li ").length;
+					for(var i = 0; i < lanren._loading; i++) {
+						var target = _content.shift();
+						if(!target) {
+							$('.lanren .more').html("<p style='font-size: 15px !important;margin-bottom: 0px !important;'>全部加载完毕...</p>");
+							break;
+						}
+						$(".lanren ul.list").append(target);
+						$(".lanren ul.list img").eq(mLis + i).each(function() {
+							$(this).attr('src', $(this).attr('realSrc'));
+						});
+					}
+				}
+			}
+			lanren.init();
+		</script>
+	
+
+</html>

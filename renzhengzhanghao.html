@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>认证账号</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/anquanbaozhang.css" />
+		<style>
+			.area {
+				margin: 20px auto 0px auto;
+			}
+			
+			.mui-input-group {
+				margin-top: 10px;
+			}
+			
+			.mui-input-group:first-child {
+				margin-top: 20px;
+			}
+			
+			.mui-input-group {
+				float: left;
+				width: 29%;
+				/*font-size: 0.75rem;*/
+			}
+			
+			.login-box-cen-form-input {
+				width: 71% !important;
+				float: left;
+				margin-top: 10px;
+			}
+			
+			.mui-checkbox input[type=checkbox],
+			.mui-radio input[type=radio] {
+				top: 6px;
+			}
+			
+			.mui-content-padded {
+				margin-top: 25px;
+			}
+			
+			.mui-btn {
+				padding: 10px;
+			}
+			
+			.link-area {
+				display: block;
+				margin-top: 25px;
+				text-align: center;
+			}
+			
+			.spliter {
+				color: #bbb;
+				padding: 0px 8px;
+			}
+			
+			.oauth-area {
+				position: absolute;
+				bottom: 20px;
+				left: 0px;
+				text-align: center;
+				width: 100%;
+				padding: 0px;
+				margin: 0px;
+			}
+			
+			.oauth-area .oauth-btn {
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				background-size: 30px 30px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				margin: 0px 20px;
+				/*-webkit-filter: grayscale(100%); */
+				border: solid 1px #ddd;
+				border-radius: 25px;
+			}
+			
+			.oauth-area .oauth-btn:active {
+				border: solid 1px #aaa;
+			}
+			
+			.oauth-area .oauth-btn.disabled {
+				background-color: #ddd;
+			}
+			
+			.submit {
+				background: #FE5E14;
+				color: #fff;
+			}
+			
+			.mui-input-group input:last-child {
+				background-image: none;
+				/*font-size: 0.75rem;*/
+			}
+			
+			input {
+				border: 0px !important;
+				margin-bottom: 0px !important;
+			}
+			
+			.login-box-cen-form-input {
+				font-size: 17px;
+				color: black !important;
+			}
+			#imghead{
+				margin-top: 0px !important;
+			}
+		</style>
+
+	</head>
+
+	<body style="background: white;">
+		<header class="mui-bar mui-bar-nav">
+			<a href="huiyuancenter.html" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">认证账号</h1>
+		</header>
+
+		<div class="mui-content" style="background: white;">
+			<div class="xian"></div>
+			<div class="login-first">
+				<form name="form1" action="xiugaimimachenggong.html">
+					<!--<div class="mui-input-row">
+						<label>手机号：</label>
+						<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入账号">
+					</div>
+					-->
+					<div class="mui-input-row">
+						<div class="register-box-cen-form clearfix mar-bottom20">
+							<span class="mui-input-group">单位名称：</span>
+							<input type="text" class="login-box-cen-form-input w358" placeholder="请输入单位名称" />
+							<label style="width: 100% !important;" class="err err-top40" id="reg_phone_text">手机号错误</label>
+						</div>
+					</div>
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group">信用代码：</span>
+						<input type="text" class="login-box-cen-form-input w228" placeholder="请输入信用代码" />
+
+					</div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group" style="margin-top: 10px;">地区确认：</span>
+						
+						<div class="lis" style="margin-left: 15px;">
+
+							<!--选择地区-->
+							<section class="express-area">
+								<a id="expressArea" href="javascript:void(0)">
+									<dl>
+
+										<dd>山西省-晋城市</dd>
+									</dl>
+								</a>
+							</section>
+							<!--选择地区弹层-->
+							<section id="areaLayer" class="express-area-box">
+								<article id="areaBox">
+
+									<div class="top">
+										<h3>选择城市</h3>
+									</div>
+									<ul id="areaList" class="area-list" style="padding: 0px; margin-bottom: 500px;"></ul>
+								</article>
+							</section>
+							<!--遮罩层-->
+							<div id="areaMask" class="mask"></div>
+						</div>
+
+					</div>
+
+					<!--<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group">从业类型：</span>
+						<input name="yourpass2" type="text" class="login-box-cen-form-input w358" required autocomplete='password' placeholder="请输入从业类型" required/>
+
+						<label class="tips" class="err err-top40" id="divpassword2"></label>
+					</div>-->
+					
+						<div class="register-box-cen-form clearfix mar-bottom20">
+						<span class="mui-input-group" style="margin-top: 15px;">从业类型：</span>
+						<div class="zhuce-input-input" style="float: left;width: 71%;">
+							<div class="select-res">
+								<div id="vbc" style="float:left;height:48px;">
+									<p style="margin-top: 10px;margin-left: 10px; width:100%;float:left;height:30px;line-height: 30px;color: #4d525d;font-size:17px;">请选择</p>
+								</div>
+							</div>
+
+							<div class="select-box">
+								<span class="close-btn">
+				<img src="img/close_btn.jpg"  style="width: 100%;height: 100%;"/>
+				</span>
+								<div class="wrap">
+									<ul class="first" style="float:left; "></ul>
+									<ul class="second" style="float:left;border-top: solid 1px #ddd;margin-top: 5px;"></ul>
+									<ul class="third" style="float:left;border-top: solid 1px #ddd;margin-top: 5px;"></ul>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+					
+					
+					
+					
+					
+
+					<div class="shangchuang" style="float: left;width: 100%;">
+						<span class="mui-input-group" style="width: 80%;margin-top: 0px;margin-left: 15px;">上传营业执照或单位盖章公函：</span>
+
+						<div class="shangchuan-kuang">
+							<div class="tupian-lix">
+								<div id="addCommodityIndex">
+
+									<!--input-group start-->
+									<div class="input-group row">
+
+										<div class="col-sm-9 big-photo">
+											<div id="preview">
+												<div class="xx" onclick="$('#previewImg').click();">
+													<a></a>
+													<p>点击上传</p>
+													<p>jpg/png格式</p>
+												</div>
+
+											</div>
+										</div>
+										<input type="file" onchange="previewImage(this)" style="display: none;" id="previewImg">
+
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="xian2"></div>
+					<div class="xian2" style="background: white;"></div>
+
+					<div class="register-box-cen-form clearfix mar-bottom20 mar-top50">
+						<button type="submit" class="login-box-cen-form-button w380" id="reg_submit">确认提交</button>
+					</div>
+				</form>
+			</div>
+
+			<div class="mui-content-padded oauth-area">
+
+			</div>
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="js/tbdValidate.js"></script>
+<script type="text/javascript" src="js/jquery.area.js"></script>
+	<script type="text/javascript">
+		/* 声明一个数组用来存input值 */
+		var array = [""];
+
+		/*方法调用*/
+		inputFn(".mui-input-row:nth-child(1) input", 0);
+
+		/* 方法封装 */
+		/*键盘弹起时实时生效*/
+		function inputFn(ele, num) {
+			$(ele).keyup(function() {
+				var val = $(this).val().trim();
+				console.log(val);
+				array[num] = val;
+				inputArray();
+			});
+		}
+		/*遍历数组，判断input值是否存在于数组中*/
+		function inputArray() {
+			for(var i = 0, arrayLen = array.length; i < arrayLen; i++) {
+				//  如果值不在数组中 就返回 并 去掉颜色
+				if(array[i] == "" || 　array[i] == null) {
+					$("button").removeClass("submit");
+					console.log(array[i] + "无法提交" + i)
+					return;
+				}
+			}
+			//
+			$("button").addClass("submit");
+		}
+
+		//第一个图片
+		function previewImage(file) {
+			var MAXWIDTH = 90;
+			var MAXHEIGHT = 90;
+			var div = document.getElementById('preview');
+			if(file.files && file.files[0]) {
+				div.innerHTML = '<img id=imghead onclick=$("#previewImg").click()>';
+				var img = document.getElementById('imghead');
+				img.onload = function() {
+					var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+					img.width = rect.width;
+					img.height = rect.height;
+					//                 img.style.marginLeft = rect.left+'px';
+					img.style.marginTop = rect.top + 'px';
+				}
+				var reader = new FileReader();
+				reader.onload = function(evt) {
+					img.src = evt.target.result;
+				}
+				reader.readAsDataURL(file.files[0]);
+			} else {
+				var sFilter = 'filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+				file.select();
+				var src = document.selection.createRange().text;
+				div.innerHTML = '<img id=imghead>';
+				var img = document.getElementById('imghead');
+				img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				status = ('rect:' + rect.top + ',' + rect.left + ',' + rect.width + ',' + rect.height);
+				div.innerHTML = "<div id=divhead style='width:" + rect.width + "px;height:" + rect.height + "px;margin-top:" + rect.top + "px;" + sFilter + src + "\"'></div>";
+			}
+		}
+
+		function clacImgZoomParam(maxWidth, maxHeight, width, height) {
+			var param = {
+				top: 0,
+				left: 0,
+				width: width,
+				height: height
+			};
+			if(width > maxWidth || height > maxHeight) {
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if(rateWidth > rateHeight) {
+					param.width = maxWidth;
+					param.height = Math.round(height / rateWidth);
+				} else {
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+
+
+
+	
+
+	<script type="text/javascript">
+		var dataJson = {
+			"option": [{
+				"id": "1",
+				"name": "请选择类型",
+				"child": [{
+					"id": "4",
+					"name": "建设单位",
+					"child": [{
+						"id": "12",
+						"name": "塑制平衡木"
+					}, {
+						"id": "13",
+						"name": "木质平衡木"
+					}, {
+						"id": "14",
+						"name": "独木桥"
+					}, {
+						"id": "15",
+						"name": "平衡步道"
+					}]
+				}, {
+					"id": "1057",
+					"name": "工程服务",
+					"child": [{
+						"id": "1063",
+						"name": "益智玩具"
+					}, {
+						"id": "1064",
+						"name": "感官玩具"
+					}, {
+						"id": "1065",
+						"name": "数学玩具"
+					}, {
+						"id": "1066",
+						"name": "手眼协调"
+					}, {
+						"id": "1067",
+						"name": "拼图玩具"
+					}, {
+						"id": "1068",
+						"name": "其他玩具"
+					}, {
+						"id": "1069",
+						"name": ""
+					}, {
+						"id": "1070",
+						"name": ""
+					}, {
+						"id": "1071",
+						"name": ""
+					}, {
+						"id": "1072",
+						"name": ""
+					}, {
+						"id": "1073",
+						"name": ""
+					}]
+				}, {
+					"id": "534",
+					"name": "工程材料",
+					"child": [{
+						"id": "555",
+						"name": "品牌策划"
+					}, {
+						"id": "556",
+						"name": "ＶＩ设计"
+					}, {
+						"id": "557",
+						"name": "招标设计"
+					}, {
+						"id": "558",
+						"name": "园区规划设计"
+					}, {
+						"id": "559",
+						"name": "装修设计"
+					}, {
+						"id": "560",
+						"name": "招标设计"
+					}, {
+						"id": "561",
+						"name": "园区规划设计"
+					}, {
+						"id": "562",
+						"name": "装修设计"
+					}, {
+						"id": "563",
+						"name": "招标设计"
+					}, {
+						"id": "564",
+						"name": "园区规划设计"
+					}, {
+						"id": "565",
+						"name": "装修设计"
+					}]
+				}]
+			}]
+		}
+		var l1 = 0,
+			l2 = 0;
+		var cname1, cname2, cname3;
+		var cid1, cid2, cid3;
+		var canClick = !0;
+		var canClose = !1;
+		$('.select-box').css({
+			left: $('.select-res').offset().left,
+			top: $('.select-res').offset().top + $('.select-res').outerHeight(true)
+		});
+		$($('.select-res')).on('click', function() {
+			$('.select-box').show();
+			if(canClick) {
+				$('ul', $('.select-box')).html('');
+				fillData();
+				canClick = !1;
+			}
+			document.getElementById("vbc").style.display = "none";
+		});
+		$('span', $('.select-box')).on("click", function() {
+			canClose ? $('.select-box').hide() : alert('请选择下级品类！');
+			canClick = !0;
+		});
+
+		$('.select-res').on('click', 'a', function() {
+			$(this).parent().remove();
+			$('.select-box').css({
+				top: $('.select-res').offset().top + $('.select-res').outerHeight(true)
+			});
+		})
+
+		$('ul.first', $('.select-box')).on('click', 'li', function() {
+			$(this).addClass('selected').siblings().removeClass('selected');
+			$('ul.third').html('');
+			fillData($(this).index());
+			l1 = $(this).index();
+			cname1 = $(this).text();
+			cid1 = $(this).attr('val');
+			canClose = !1;
+			$('input.cid', $('.select-res')).val(cid1);
+			$('input.cname', $('.select-res')).val(cname1);
+		});
+		$('ul.second', $('.select-box')).on('click', 'li', function() {
+			$(this).addClass('selected').siblings().removeClass('selected');
+			fillData(l1, $(this).index());
+			l2 = $(this).index();
+			cname2 = $(this).text();
+			cid2 = $(this).attr('val');
+			canClose = !1;
+			$('input.cid', $('.select-res')).val(cid1 + ',' + cid2);
+			$('input.cname', $('.select-res')).val(cname1 + ',' + cname2);
+		});
+		$('ul.third', $('.select-box')).on('click', 'li', function() {
+			$(this).addClass('selected').siblings().removeClass('selected');
+			cname3 = $(this).text();
+			cid3 = $(this).attr('val');
+			canClose = !0;
+			var hasExist = !1;
+			$('.select-res').find("p").each(function() {
+				if($(this).text().split(' > ')[0] == cname3) hasExist = !0;
+			})
+			hasExist ? alert('所选品类已被添加！') : $('.select-res').append('<p>' + cname3 + '<a></a><input type="hidden" value="' + cid3 + '" name="cid[]" /><input type="hidden" value="' + cname3 + '" name="cname[]" /></p>');
+			$('.select-box').css({
+				top: $('.select-res').offset().top + $('.select-res').outerHeight(true)
+			});
+			$('input.cid', $('.select-res')).val(cid3);
+			$('input.cname', $('.select-res')).val(cname3);
+		});
+
+		//填充级联数据
+
+		function fillData(l1, l2) {
+			var temp_html = "";
+			if(typeof(dataJson.option) != 'undefined' && arguments.length == 0) {
+				$.each(dataJson.option, function(i, pro) {
+					temp_html += '<li val="' + pro.id + '">' + pro.name + '</li>';
+				});
+			} else if(typeof(dataJson.option[l1].child) != 'undefined' && arguments.length == 1) {
+				$.each(dataJson.option[l1].child, function(i, pro) {
+					temp_html += '<li val="' + pro.id + '">' + pro.name + '</li>';
+				});
+			} else if(typeof(dataJson.option[l1].child[l2].child) != 'undefined' && arguments.length == 2) {
+				$.each(dataJson.option[l1].child[l2].child, function(i, pro) {
+					temp_html += '<li val="' + pro.id + '">' + pro.name + '</li>';
+				});
+			}
+			$('.select-box ul:eq(' + arguments.length + ')').html(temp_html);
+		}
+
+		
+	
+
+	</script>
+
+
+
+
+
+
+
+
+
+
+</html>
